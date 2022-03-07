@@ -8,8 +8,8 @@
 
 
 <body>
-    <h1 class="head">傻瓜家族🐖她</h1>
-    <img class="title" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fi5.jrjimg.cn%2F201008%2F30%2Fbbs_attach_img%2Fbbs_attach_img_12831653437411.jpg&refer=http%3A%2F%2Fi5.jrjimg.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1612510604&t=58cd7770b2b1d59d9070688ec046fa45" alt="">
+    <h1 class="head">暂停维护...</h1>
+<!--     <img class="title" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fi5.jrjimg.cn%2F201008%2F30%2Fbbs_attach_img%2Fbbs_attach_img_12831653437411.jpg&refer=http%3A%2F%2Fi5.jrjimg.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1612510604&t=58cd7770b2b1d59d9070688ec046fa45" alt="">
     <div class="container" id="contaner">
         <div class="content" id="content">
             <div class="slider-img" id="slider">
@@ -34,71 +34,71 @@
         </div>
     </div>
     <div class="zf"><img src="./images//5.png" alt=""></div>
-   
+    -->
 </body>
  <script>
         //首先要获取元素
 
-        var container = document.getElementById("container"); var content = document.getElementById("content"); var slider = document.getElementById("slider"); var img = document.getElementById("img"); var ul = document.getElementById("ul"); var li = document.getElementsByTagName("li"); 
-        var left = document.getElementById("left"); var right = document.getElementById("right"); var num = 0; var timer = null; //图片位置
+//         var container = document.getElementById("container"); var content = document.getElementById("content"); var slider = document.getElementById("slider"); var img = document.getElementById("img"); var ul = document.getElementById("ul"); var li = document.getElementsByTagName("li"); 
+//         var left = document.getElementById("left"); var right = document.getElementById("right"); var num = 0; var timer = null; //图片位置
 
-        var arrUrl = [
-            "./images/1.jpg",
-            "./images/2.jpg",
-            "./images/3.jpg",
-            "./images/4.jpg",
-        ];
-        left.onclick = function (ev) {
-            num--;
-            if (num == -1) {
-                num = arrUrl.length - 1; //如果到了第一张，返回最后一张
-            }
+//         var arrUrl = [
+//             "./images/1.jpg",
+//             "./images/2.jpg",
+//             "./images/3.jpg",
+//             "./images/4.jpg",
+//         ];
+//         left.onclick = function (ev) {
+//             num--;
+//             if (num == -1) {
+//                 num = arrUrl.length - 1; //如果到了第一张，返回最后一张
+//             }
 
-            changeImg();
-        };
-        right.onclick = function (ev) {
-            num++;
-            if (num == arrUrl.length) {
-                num = 0; //如果是最后一张，则返回第一张
-            }
+//             changeImg();
+//         };
+//         right.onclick = function (ev) {
+//             num++;
+//             if (num == arrUrl.length) {
+//                 num = 0; //如果是最后一张，则返回第一张
+//             }
 
-            changeImg();
-        }; //点击小圆点跳转到对应的图片
+//             changeImg();
+//         }; //点击小圆点跳转到对应的图片
 
-        for (var i = 0; i < arrUrl.length; i++) {
-            li[i].index = i;
-            li[i].onclick = function (ev) {
-                num = this.index;
-                changeImg();
-            };
-        }
+//         for (var i = 0; i < arrUrl.length; i++) {
+//             li[i].index = i;
+//             li[i].onclick = function (ev) {
+//                 num = this.index;
+//                 changeImg();
+//             };
+//         }
 
-        setTimeout(autoPlay(), 1000); //延迟1秒执行自动切换 //鼠标移入清除定时器，鼠标移出恢复
+//         setTimeout(autoPlay(), 1000); //延迟1秒执行自动切换 //鼠标移入清除定时器，鼠标移出恢复
 
-        content.onmouseover = function (ev) {
-            clearInterval(timer);
-        };
-        content.onmouseout = autoPlay; //图片切换函数
+//         content.onmouseover = function (ev) {
+//             clearInterval(timer);
+//         };
+//         content.onmouseout = autoPlay; //图片切换函数
 
-        function changeImg() {
-            img.src = arrUrl[num]; //改变图片src位置
+//         function changeImg() {
+//             img.src = arrUrl[num]; //改变图片src位置
 
-            for (var i = 0; i < li.length; i++) {
-                //改变原点样式
+//             for (var i = 0; i < li.length; i++) {
+//                 //改变原点样式
 
-                li[i].className = "";
-            }
+//                 li[i].className = "";
+//             }
 
-            li[num].className = "active";
-        } //设置定时器
+//             li[num].className = "active";
+//         } //设置定时器
 
-        function autoPlay() {
-            timer = setInterval(function () {
-                num++;
-                num %= arrUrl.length;
-                changeImg();
-            }, 2000);
-        }
+//         function autoPlay() {
+//             timer = setInterval(function () {
+//                 num++;
+//                 num %= arrUrl.length;
+//                 changeImg();
+//             }, 2000);
+//         }
     </script>
     <style>
         .head{
